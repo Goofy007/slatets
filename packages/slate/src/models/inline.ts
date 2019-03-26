@@ -4,6 +4,7 @@ import { List, Map, Record } from "immutable";
 
 import MODEL_TYPES from "../constants/model-types";
 import KeyUtils from "../utils/key-utils";
+import Node from "./node"
 
 /**
  * 默认属性
@@ -20,7 +21,7 @@ const DEFAULTS = {
  * Inline
  * @type {Inline}
  */
-class Inline extends Record(DEFAULTS) {
+class Inline extends Record(DEFAULTS) implements Node {
     public key: string;
     public type: string;
     public isVoid: string;

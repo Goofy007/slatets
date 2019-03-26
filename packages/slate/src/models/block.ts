@@ -6,6 +6,7 @@ import MODEL_TYPES from "../constants/model-types";
 import KeyUtils from "../utils/key-utils";
 import Inline from "./inline";
 import Text from "./text";
+import Node from "./node";
 
 // import Mark from "./mark";
 
@@ -24,7 +25,7 @@ const DEFAULTS = {
  * Block
  * @type {Block}
  */
-class Block extends Record(DEFAULTS) {
+class Block extends Record(DEFAULTS) implements Node {
     // 属性
     public key: string;
     public type: string;
