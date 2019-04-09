@@ -562,12 +562,11 @@ class Text extends Record(DEFAULTS) {
 
         return object;
     }
-
-    /**
-     * Alias `toJS`.
-     */
-
-    toJS = this.toJSON;
+    
+    /** alias `toJSON` */
+    toJS(options: any = {}) {
+        return this.toJSON(options);
+    }
 
     /**
      * Update a `mark` at `index` and `length` with `properties`.
